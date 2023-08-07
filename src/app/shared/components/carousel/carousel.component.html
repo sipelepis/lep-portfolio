@@ -1,0 +1,34 @@
+<mat-tab-group class="tab font-bold">
+  <mat-tab (click)="swapTabs(1)" label="Frameworks"> 
+    <ng-template mat-tab-label>
+      <mat-icon class="example-tab-icon">thumb_up</mat-icon>
+      Frameworks
+    </ng-template>
+    <div class="slider">
+      <!-- <div class=""> -->
+        <img class="" [src]="getCurrentSlideUrl()" alt="image description"> 
+      <!-- </div> -->
+      <div>
+        <div (click)="goToPrevious()" class="leftArrow">❰</div>
+        <div (click)="goToNext()" class="rightArrow">❱</div>
+      </div>
+      <div class="block text-center">
+          <p class=" px-2 font-bold text-2xl">{{getTitle()}}</p>
+          <p class="px-2 font-regular text-xl">{{getCaption()}}</p>
+      </div>
+    </div>
+  </mat-tab>
+  <mat-tab (click)="swapTabs(2)" label="Programming Languages"> 
+    <div class="slider">
+      <img class="" [src]="getCurrentSlideUrl()" alt="image description">
+      <div>
+        <div (click)="goToPrevious()" class="leftArrow">❰</div>
+        <div (click)="goToNext()" class="rightArrow">❱</div>
+      </div>
+      <div class="block text-center">
+          <p class="text-tertiary px-2 font-bold text-2xl">{{getTitle()}}</p>
+          <p class="px-2 font-regular text-xl">{{getCaption()}}</p>
+      </div>
+    </div>
+  </mat-tab>
+</mat-tab-group>

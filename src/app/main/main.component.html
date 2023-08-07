@@ -1,0 +1,51 @@
+
+<app-navbar></app-navbar>
+<div class="min-w-full">
+    <div class="flex justify-between container mx-auto py-5 2xl:w-6/12">
+        <div class=" w-1/2 ">
+            <div>
+                <img class="h-auto max-w-full" src="assets/main-image.png" alt="image description">
+            </div>
+        </div>
+        <div class="flex items-center w-1/2">
+            <div>
+                <div class=" px-2 font-bold text-2xl">
+                    Hello, it's me
+                </div>
+                <div class="px-2 py-5 font-1 font-bold text-5xl">
+                    Phillip Moran <span class="text-tertiary">•</span>
+                </div>
+                <div class="px-2 font-regular text-xl text-justify">
+                    A hard-working and career-driven person looking for a CS/IT job opportunity in your company where I
+    can provide my services while training to improve my skills in a real-world working environment.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex justify-between container mx-auto py-5 2xl:w-6/12">
+        <div class="flex items-center w-1/2">
+            <div>
+                <div class="underline underline-offset-1 text-tertiary px-2 font-bold text-2xl">
+                    My Skills
+                </div>
+                <div class="px-2 py-5 font-1 font-bold text-4xl text-justify">
+                    Front-end Web Development, Backend Web Development, Linux Server Configuration
+                </div>
+                <div class="px-2 font-regular text-xl text-justify">
+                    A hard-working and career-driven person looking for a CS/IT job opportunity in your company where I
+    can provide my services while training to improve my skills in a real-world working environment.
+                </div>
+            </div>
+        </div>
+        <div class="flex items-center w-1/2">
+            <div>
+                <div class="text-xl">
+                    <app-carousel [frameWork]="frameWork" [progLang]="progLang"></app-carousel>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<app-footer></app-footer>
