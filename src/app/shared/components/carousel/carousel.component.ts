@@ -6,11 +6,11 @@ import { MatTabsModule } from '@angular/material/tabs';
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.css'],
-  encapsulation: ViewEncapsulation.None
 })
 export class CarouselComponent {
   @Input() frameWork: SlideInterface[] = [];
   @Input() progLang: SlideInterface[] = [];
+  @Input() 
   slides: SlideInterface [] = [];
   currentIndex: number = 0;
   swapTabs(tab: number){

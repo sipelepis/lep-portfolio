@@ -1,18 +1,5 @@
-
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
-// Plus imports for other components in your app.
-
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
 @include mat.core();
-
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
-
 $lep-prim-palette: (
     50: #E2F5ED,
     100: #BAE6D1,
@@ -82,26 +69,30 @@ $lep-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
 $lep-warn: mat.define-palette(mat.$red-palette);
 $lep-prim: mat.define-palette($lep-prim-palette);
 $lep-comp: mat.define-palette($lep-comp-palette);
-// Create the theme object. A theme consists of configurations for individual
-// theming systems such as "color" or "typography".
 $lep-theme: mat.define-light-theme((
   color: (
     primary: $lep-prim,
     accent: $lep-accent,
     warn: $lep-warn,
-    comp: $lep-comp,
   )
 ));
+@include mat.core-theme($lep-theme);
 .tab{
   background: mat.get-color-from-palette($lep-prim, '50-contrast');
   color: mat.get-color-from-palette($lep-prim-palette, '400');
 }
-
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
+.cards{
+  background: mat.get-color-from-palette($lep-prim, '50-contrast');
+  color: mat.get-color-from-palette($lep-prim-palette, '400');
+}
+.cards1{
+  color:black;
+  // background-color: red !important;
+}
+.mat-mdc-card-subtitle{
+  color: #18B980 !important;
+}
 @include mat.all-component-themes($lep-theme);
-
 .mat-mdc-tab-group, .mat-mdc-tab-nav-bar{
   --mat-tab-header-active-focus-label-text-color: #18B980;
   --mat-tab-header-active-label-text-color : #18B980;

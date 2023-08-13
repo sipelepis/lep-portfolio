@@ -1,3 +1,5 @@
+
+/* @import 'src/custom-theme.scss'; */
 .slide {
     width: 100%;
     height: auto;
@@ -42,4 +44,19 @@
   margin: 0 3px;
   cursor: pointer;
   font-size: 20px;
+}
+
+
+.example-card1 {
+  max-width: 700px;
+  /* max-height: 600px; */
+}
+.example-card2 {
+  max-width: 700px;
+  /* max-height: 600px; */
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
 }

@@ -1,13 +1,11 @@
-<mat-tab-group class="tab font-bold">
+<!-- <mat-tab-group class="tab font-bold">
   <mat-tab (click)="swapTabs(1)" label="Frameworks"> 
     <ng-template mat-tab-label>
       <mat-icon class="example-tab-icon">thumb_up</mat-icon>
       Frameworks
     </ng-template>
     <div class="slider">
-      <!-- <div class=""> -->
         <img class="" [src]="getCurrentSlideUrl()" alt="image description"> 
-      <!-- </div> -->
       <div>
         <div (click)="goToPrevious()" class="leftArrow">❰</div>
         <div (click)="goToNext()" class="rightArrow">❱</div>
@@ -19,7 +17,7 @@
     </div>
   </mat-tab>
   <mat-tab (click)="swapTabs(2)" label="Programming Languages"> 
-    <div class="slider">
+    <div class="slider mx-5 px-5">
       <img class="" [src]="getCurrentSlideUrl()" alt="image description">
       <div>
         <div (click)="goToPrevious()" class="leftArrow">❰</div>
@@ -31,4 +29,44 @@
       </div>
     </div>
   </mat-tab>
-</mat-tab-group>
+</mat-tab-group> -->
+<div class="flex items-center justify-center mx-auto w-100vh">
+  <mat-card class="example-card1 cards1 mx-3">
+    <mat-card-header>
+      <!-- <div mat-card-avatar class="example-header-image"></div> -->
+      <mat-card-title style="font-weight: bold;">Relay Version 2</mat-card-title>
+      <mat-card-subtitle class="mat-mdc-card-subtitle">Angular 14+, MDBootstrap, @angular/pwa, figma</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="assets/projects/relayver2-proj.png" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p >
+        We developed a responsive web application with PWA using Figma and Angular.
+      </p>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="example-card2 cards1 mx-3">
+    <mat-card-header>
+      <!-- <div mat-card-avatar class="example-header-image"></div> -->
+      <mat-card-title style="font-weight: bold;">GUSI - A Digital Repository for a College at UE-Caloocan</mat-card-title>
+      <mat-card-subtitle class="mat-mdc-card-subtitle">Angular 14+, Ubuntu 22.04, DSpace, Figma, PostgreSQL</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="assets/projects/gusi-proj.png" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p >
+        We built a digital repository website using DSpace.
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<!-- <div class="slider">
+  <img class="" [src]="getCurrentSlideUrl()" alt="image description"> 
+  <div>
+    <div (click)="goToPrevious()" class="leftArrow">❰</div>
+    <div (click)="goToNext()" class="rightArrow">❱</div>
+  </div>
+  <div class="block text-center">
+      <p class=" px-2 font-bold text-2xl">{{getTitle()}}</p>
+      <p class="px-2 font-regular text-xl">{{getCaption()}}</p>
+  </div>
+</div> -->
