@@ -1,0 +1,9 @@
+.slider {
+    position: relative;
+    height: 100%;
+}
+  
+.example-card1 {
+    max-width: 700px;
+    border-radius: 5rem !important;
+}

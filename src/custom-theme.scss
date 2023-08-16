@@ -86,11 +86,49 @@ $lep-theme: mat.define-light-theme((
   color: mat.get-color-from-palette($lep-prim-palette, '400');
 }
 .cards1{
-  color:black;
+  color:white;
   // background-color: red !important;
 }
-.mat-mdc-card-subtitle{
+.mct{
   color: #18B980 !important;
+  font-weight: bold !important;
+}
+.mat-mdc-card-subtitle{
+  color: white !important;
+}
+.button-col{
+  color:  #18B980 !important;
+}
+.header-bg{
+  background-color: transparent !important;
+  width: 100%;
+  /* bottom:1px; */
+  // display: none;
+  bottom: -4px;
+  opacity: 0%;
+}
+.card-wrapper{
+  border-radius: 5rem !important;
+}
+.card-wrapper:hover{
+  .header-bg{
+    display:block;
+    opacity:100%;
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 1000ms;
+    // -moz-transition: all 1s ease-in-out;
+    // transition: all 1s ease-in-out;
+    bottom: 0px;
+  }
 }
 @include mat.all-component-themes($lep-theme);
 .mat-mdc-tab-group, .mat-mdc-tab-nav-bar{

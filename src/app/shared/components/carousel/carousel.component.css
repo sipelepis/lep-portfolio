@@ -45,18 +45,27 @@
   cursor: pointer;
   font-size: 20px;
 }
-
-
 .example-card1 {
   max-width: 700px;
-  /* max-height: 600px; */
 }
 .example-card2 {
   max-width: 700px;
-  /* max-height: 600px; */
 }
-
-.example-header-image {
-  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-  background-size: cover;
+img{
+  display: none;
+  border-radius: 15px;
+}
+img.image-active {
+  display: block;
+  width: 100%;
+}
+.dot{
+  cursor: pointer;
+  height:5px;
+  width: 5px;
+  margin: 0 5px;
+  background-color: white;
+  display: inline-block;
+  transition: opacity 0.6s ease;
+  opacity: 0.5;
 }
