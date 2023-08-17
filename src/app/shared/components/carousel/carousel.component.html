@@ -1,8 +1,3 @@
-<!-- 
-<div *ngIf="projects && projects.length > 0" class="">
-  <img *ngFor="let image of projects; let i=index" [src]="image.url" 
-  [ngClass]="{'image-active': selectedIndex ===i}">
-</div>   
-<div *ngIf="indicators" class="absolute flex justify-center mb-1">
-  <span *ngFor="let dot of projects; let i = index" class="dot" [ngClass]="{'active': selectedIndex ===i}"></span>
-</div> -->
+<div class="rounded-lg">
+  <img class="relative" mat-card-image [src]="getCurrentSlideUrl()" [alt]="projectName">
+</div>

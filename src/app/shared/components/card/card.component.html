@@ -1,8 +1,11 @@
 <mat-card class="card-wrapper relative example-card1 cards1 mx-3">
     <a [href]="project.url">
-    <div class="rounded-lg relative t-0 l-0">
-        <img class="relative" mat-card-image [src]="project.img" alt="Photo of a GUSI">
-        <div class="header-bg absolute bg-gradient-to-b from-transparent to-black ">
+    <div class=" relative t-0 b-0">
+        <app-carousel  [images]="project.img" [projectName]="project.alt"></app-carousel>
+        <div class="card-overlay bg-gradient-to-b from-transparent to-black ">
+            
+        </div>
+        <div class="header-bg absolute ">
             <mat-card-header>
                 <mat-card-title class="mct">{{project.title}}</mat-card-title>
                 <mat-card-subtitle class="mcs">{{project.tech}}</mat-card-subtitle>
@@ -13,13 +16,8 @@
                 </p>
             </mat-card-content>
         </div>
+       
     </div>
     </a>
 </mat-card>
 
-
-
-
-<!-- <div *ngIf="projectType && projectType.length > 0" class="">
-    <img *ngFor="let image of projectType; let i=index" [src]="image.url">
-</div>    -->

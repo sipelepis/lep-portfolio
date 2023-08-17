@@ -1,11 +1,9 @@
-
-/* @import 'src/custom-theme.scss'; */
 .slide {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    background-size: cover;
-    background-position: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
 }
 
 .rightArrow {
@@ -44,28 +42,4 @@
   margin: 0 3px;
   cursor: pointer;
   font-size: 20px;
-}
-.example-card1 {
-  max-width: 700px;
-}
-.example-card2 {
-  max-width: 700px;
-}
-img{
-  display: none;
-  border-radius: 15px;
-}
-img.image-active {
-  display: block;
-  width: 100%;
-}
-.dot{
-  cursor: pointer;
-  height:5px;
-  width: 5px;
-  margin: 0 5px;
-  background-color: white;
-  display: inline-block;
-  transition: opacity 0.6s ease;
-  opacity: 0.5;
 }

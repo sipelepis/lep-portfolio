@@ -57,18 +57,6 @@ side-box{
   height: 100%;
 }
 
-.dotsContainer {
-  display: flex;
-  justify-content: center;
-}
-
-.dot {
-  margin: 0 3px;
-  cursor: pointer;
-  font-size: 20px;
-}
-
-
 .example-card1 {
   max-width: 700px;
   /* max-height: 600px; */
