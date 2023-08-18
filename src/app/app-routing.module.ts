@@ -5,8 +5,8 @@ import { FooterComponent } from './footer/footer.component';
 import { MainComponent } from './main/main.component';
 
 const routes: Routes = [
-  {path: 'home', component:MainComponent},
-  {path: '', redirectTo:'/home', pathMatch:'full'},
+  {path: '', component:MainComponent},
+  {path: 'home', redirectTo:'', pathMatch:'full'},
 ];
 
 @NgModule({

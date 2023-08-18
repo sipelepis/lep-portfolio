@@ -1,10 +1,20 @@
 
 <app-navbar></app-navbar>
 <div class="min-w-full">
-    <div class="flex justify-between container mx-auto py-5 2xl:w-7/12">
+    <div class="isolate">
+        <div class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]" aria-hidden="true">
+            <div class="relative clippath1 left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-tertiary to-[#005B33] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]"></div>
+        </div>
+    </div>
+    <div class="isolate">
+        <div class="blur-3xl absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden sm:top-[-20rem]" aria-hidden="true">
+          <div class="clippath2 to-[#005B33] relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[300deg] scale-x-100 bg-gradient-to-tr from-tertiary opacity-30 sm:top-[0rem] sm:left-[calc(50%+40rem)] sm:w-[72.1875rem]"></div>
+        </div>
+    </div>
+    <div class="flex justify-between container mx-auto mt-16 sm:mt-20 2xl:w-7/12">
         <div class=" w-1/2">
             <div class="grid place-items-center">
-                <img class="h-auto w-8/12" src="assets/main-image.png" alt="image description">
+                <img class="h-auto w-11/12" src="assets/main-image.png" alt="image description">
             </div>
         </div>
         <div class="flex items-center w-1/2">
@@ -21,7 +31,7 @@
             </div>
         </div>
     </div>
-    <div class="flex justify-between container mx-auto pt-5 2xl:w-7/12 pb-5">
+    <div class="flex justify-between container mx-auto mt-16 sm:mt-20 2xl:w-7/12">
         
         <div class="flex items-center w-1/2 px-4">
             <div>
@@ -39,36 +49,20 @@
             </div>
         </div>
     </div>
-    <div class="flex justify-between container mx-auto pb-5 2xl:w-7/12">
+    
+    <div class="flex justify-between container mx-auto pb-5 2xl:w-7/12 mt-16 sm:mt-20">
         <div class="grid grid-cols-3 px-4">
             <div *ngFor="let skills of skillsets">
                 <app-list [skillsets]="[skills]"></app-list>
             </div>
         </div>
     </div>
-    <div class="block container mx-auto py-5 2xl:w-7/12  px-6 ">
+    <div class="block container mx-auto py-5 2xl:w-7/12  px-6 mt-16 sm:mt-20 mt-16 sm:mt-20">
         <div class="underline underline-offset-1 text-tertiary font-bold text-2xl">
           My Projects 
         </div> 
     </div>  
-    <app-multi-item-carousel></app-multi-item-carousel>
-    <div class="block container mx-auto py-5 2xl:w-7/12  px-6 ">
-        <div class="underline underline-offset-1 text-tertiary font-bold text-2xl">
-          My Projects 
-        </div> 
-    </div> 
-    <div class="flex justify-between container mx-auto pt-5 2xl:w-7/12 pb-5">
-        <div class="flex items-center w-1/2 px-4">
-            <div class="px-2 py-5 font-1 font-bold text-4xl text-justify">
-                Full-stack Web and android App Development, Data Structures and Algorithms, Git & Version
-                
-            </div>
-        </div>
-        <div class="flex items-center w-1/2 px-4">
-            <div class="px-2 py-5 font-1 font-bold text-4xl text-justify">
-                Full-stack Web and android App Development, Data Structures and Algorithms, Git & Version 
-            </div>
-        </div>
-    </div>
+    <app-multi-item-carousel class="mt-16 sm:mt-20"></app-multi-item-carousel>
 </div>
+<app-contacts></app-contacts>
 <app-footer></app-footer>
