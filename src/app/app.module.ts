@@ -13,13 +13,15 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatDividerModule} from '@angular/material/divider';
+import { ContactsComponent } from './contacts/contacts.component';
 // import { MatTabsModule } from '@angular/material/tabs';
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    MainComponent
+    MainComponent,
+    ContactsComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +36,9 @@ import {MatDividerModule} from '@angular/material/divider';
     MatDividerModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [
+    ContactsComponent
+  ]
 })
 export class AppModule { }

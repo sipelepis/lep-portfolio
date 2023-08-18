@@ -7,9 +7,4 @@ import { ProjectInterface } from '../../types/project-interface'
 })
 export class CardComponent {
  @Input() project: any;
- ngOnInit(): void{
-  console.log(this.project)
-  // console.log(this.project.img)
- }
-
 }

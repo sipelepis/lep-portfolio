@@ -16,9 +16,8 @@ export class CarouselComponent {
 
   currentIndex: number = 0;
   timeoutId?: number;
+
   ngOnInit(): void{
-    console.log(this.images[0]);
-    console.log(this.getCurrentSlideUrl());
     this.resetTimer();
   }
   getCurrentSlideUrl() {
@@ -29,14 +28,12 @@ export class CarouselComponent {
     const newIndex = isFirstSlide
       ? this.images.length - 1
       : this.currentIndex - 1;
-
     this.resetTimer();
     this.currentIndex = newIndex;
   }
   goToNext(): void {
     const isLastSlide = this.currentIndex === this.images.length - 1;
     const newIndex = isLastSlide ? 0 : this.currentIndex + 1;
-
     this.resetTimer();
     this.currentIndex = newIndex;
   }

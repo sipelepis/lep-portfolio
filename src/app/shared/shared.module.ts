@@ -8,11 +8,16 @@ import {MatCardModule} from '@angular/material/card';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatDividerModule} from '@angular/material/divider';
 import { CardComponent } from './components/card/card.component';
+import { CarouselModule } from 'primeng/carousel';
+import { MultiItemCarouselComponent } from './components/multi-item-carousel/multi-item-carousel.component';
+import { ListComponent } from './components/list/list.component';
 @NgModule({
   declarations: [
     CarouselComponent,
     ButtonComponent,
-    CardComponent
+    CardComponent,
+    MultiItemCarouselComponent,
+    ListComponent
   ],
   imports: [
     CommonModule,
@@ -20,12 +25,15 @@ import { CardComponent } from './components/card/card.component';
     MatIconModule,
     MatCardModule,
     MatProgressBarModule,
-    MatDividerModule
+    MatDividerModule,
+    CarouselModule
   ],
   exports: [
     CarouselComponent,
     ButtonComponent,
-    CardComponent
+    CardComponent,
+    MultiItemCarouselComponent,
+    ListComponent
   ]
 })
 export class SharedModule { }
