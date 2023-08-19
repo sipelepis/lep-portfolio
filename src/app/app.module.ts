@@ -16,7 +16,7 @@ import {MatDividerModule} from '@angular/material/divider';
 import { ContactsComponent } from './contacts/contacts.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +38,8 @@ import {FormsModule} from '@angular/forms';
     MatDividerModule,
     MatInputModule,
     MatFormFieldModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

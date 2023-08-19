@@ -10,3 +10,6 @@ width: 100%;
 .input-ringless{
     --tw-ring-shadow: none !important;
 }
+button:disabled{
+  background-color: grey !important;
+}

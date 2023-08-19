@@ -3,36 +3,56 @@
       <h2 class="text-3xl font-bold tracking-tight text-tertiary sm:text-4xl">Let's work together.</h2>
       <p class="mt-2 text-lg leading-8 text-primary">If you'd like to talk about a project you want help with, just drop me a message.</p>
     </div>
-    <form action="#" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-20 text-primary">
+    <form action="#" method="POST" class="mx-auto mt-16 max-w-2xl sm:mt-20 text-primary" [formGroup]="contactForm" (ngSubmit)="submitForm()">
       <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
         <div>
           <mat-form-field class="example-full-width">
-            <mat-label for="first-name" class="block text-sm font-semibold leading-6 ">First name</mat-label>
-            <input matInput placeholder="Steve" type="text" name="first-name" id="first-name" autocomplete="given-name" class="input-ringless text-secondary block w-full rounded-md">
+            <mat-label for="first-name" class="text-sm font-semibold leading-6 ">First name</mat-label>
+            <input matInput [(ngModel)]="firstName" placeholder="Steve" type="text" name="first-name" id="first-name" class="input-ringless text-secondary block w-full rounded-md" formControlName="firstnameValidator" required>
+            <mat-error *ngIf="contactForm.get('firstnameValidator')?.invalid">
+              {{checkName("firstnameValidator")}}
+            </mat-error>
           </mat-form-field>
         </div>
         <div>
           <mat-form-field class="example-full-width">
-            <mat-label for="last-name" class="block text-sm font-semibold leading-6 ">Last name</mat-label>
-            <input matInput placeholder="Dela Cruz" type="text" name="last-name" id="last-name" autocomplete="given-name" class="input-ringless text-secondary block w-full rounded-md">
-          </mat-form-field>
-        </div>
-
-        <div class="sm:col-span-2">
-          <mat-form-field class="example-full-width">
-            <mat-label for="email" class="block text-sm font-semibold leading-6">Email</mat-label>
-            <input matInput placeholder="stevegamerz@gmail.com" type="email" name="email" id="email" autocomplete="given-name" class="input-ringless text-secondary block w-full rounded-md">
+            <mat-label for="last-name" class="text-sm font-semibold leading-6 ">Last name</mat-label>
+            <input matInput [(ngModel)]="lastName" placeholder="Dela Cruz" type="text" name="last-name" id="last-name" class="input-ringless text-secondary block w-full rounded-md" formControlName="lastnameValidator" required>
+            <mat-error *ngIf="contactForm.get('lastnameValidator')?.invalid">
+              {{checkName("lastnameValidator")}}
+            </mat-error>
           </mat-form-field>
         </div>
         <div class="sm:col-span-2">
           <mat-form-field class="example-full-width">
-            <mat-label for="message" class="block text-sm font-semibold leading-6">Message</mat-label>
-            <textarea  matInput placeholder="I love you" type="text" rows="4" name="message" id="message" autocomplete="given-name" class="input-ringless text-secondary block w-full rounded-md"></textarea>
+            <mat-label for="email" class="text-sm font-semibold leading-6">Email</mat-label>
+            <input matInput [(ngModel)]="email" placeholder="stevegamerz@gmail.com" type="email" name="email" id="email" class="input-ringless text-secondary block w-full rounded-md" formControlName="emailValidator" required>
+            <mat-error *ngIf="contactForm.get('emailValidator')?.invalid">
+              {{checkEmail()}}
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="sm:col-span-2">
+          <mat-form-field class="example-full-width">
+            <mat-label for="subject" class="text-sm font-semibold leading-6">Subject</mat-label>
+            <input matInput [(ngModel)]="subject" placeholder="Join Our Team as [Position Title]" type="text" name="subject" id="subject" maxlength="70" class="input-ringless text-secondary block w-full rounded-md" formControlName="subjectValidator" required>
+            <mat-error *ngIf="contactForm.get('subjectValidator')?.invalid">
+              {{checkSubject()}}
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="sm:col-span-2">
+          <mat-form-field class="example-full-width">
+            <mat-label for="message" class="text-sm font-semibold leading-6">Message</mat-label>
+            <textarea  matInput [(ngModel)]="message" placeholder="We invite to you be a part of our team for the position [Position Title]" type="text" rows="4" name="message" id="message" class="input-ringless text-secondary block w-full rounded-md" formControlName="messageValidator" required></textarea>
+            <mat-error *ngIf="contactForm.get('messageValidator')?.invalid">
+              {{checkMessage()}}
+            </mat-error>
           </mat-form-field>
         </div>
       </div>
       <div class="mt-10">
-        <button type="submit" class="block w-full rounded-md bg-[#00AC6A] px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-[#18B980] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Let's talk</button>
+        <button [disabled]="!contactForm.valid" type="submit" class="block w-full rounded-md bg-[#00AC6A] px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-[#18B980] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Let's talk</button>
       </div>
     </form>
   </div>
