@@ -17,19 +17,19 @@ $lep-prim-palette: (
     A700: #008B53,
     contrast: (
       50: rgba(black, 0.87),
-        100: rgba(black, 0.87),
-        200: rgba(black, 0.87),
-        300: rgba(black, 0.87),
-        400: rgba(black, 0.87),
-        500: white,
-        600: white,
-        700: white,
-        800: white,
-        900: white,
-        A100: rgba(black, 0.87),
-        A200: rgba(black, 0.87),
-        A400: rgba(black, 0.87),
-        A700: white,
+      100: rgba(black, 0.87),
+      200: rgba(black, 0.87),
+      300: rgba(black, 0.87),
+      400: rgba(black, 0.87),
+      500: white,
+      600: white,
+      700: white,
+      800: white,
+      900: white,
+      A100: rgba(black, 0.87),
+      A200: rgba(black, 0.87),
+      A400: rgba(black, 0.87),
+      A700: white,
     )
 );
 $lep-comp-palette: (
@@ -151,6 +151,19 @@ $lep-theme: mat.define-light-theme((
     // -moz-transition: all 1s ease-in-out;
     // transition: all 1s ease-in-out;
     bottom: 0px;
+  }
+}
+.multi-carousel{
+  button{
+    // background-color: #E2F5ED !important;
+    width: 1rem !important;
+    height: 1rem !important;
+    border-radius: 9999px !important;
+    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    border-radius: 0;
+  }
+  .p-highlight button{
+    background-color: #18B980 !important;
   }
 }
 @include mat.all-component-themes($lep-theme);
