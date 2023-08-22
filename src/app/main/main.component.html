@@ -40,7 +40,7 @@
                 <div class="underline underline-offset-1 text-tertiary px-2 font-bold text-2xl">
                     My Skills
                 </div>
-                <div class="px-2 py-5 font-1 font-bold text-5xl md:text-5xl text-justify">
+                <div class="px-2 py-5 font-1 font-bold text-5xl md:text-4xl lg:text-5xl text-justify">
                     Full-stack Web and android App Development, Data Structures and Algorithms, Git & Version 
                 </div>
             </div>
@@ -53,7 +53,7 @@
     </div>
     
     <div class="flex justify-center md:justify-between container mx-auto pb-5 2xl:w-7/12 mt-16 sm:mt-20">
-        <div class="grid grid-cols-2 md:grid-cols-3 px-4 gap-y-5">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 px-4 gap-y-5 md:gap-x-20 lg:gap-x-40">
             <div *ngFor="let skills of skillsets">
                 <app-list [skillsets]="[skills]"></app-list>
             </div>

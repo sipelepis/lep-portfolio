@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Validators, FormBuilder, FormGroup} from '@angular/forms';
+import { EmailService } from '../email.service';
 @Component({
   selector: 'app-contacts',
   templateUrl: './contacts.component.html',
@@ -12,6 +13,13 @@ export class ContactsComponent {
   email: string = "";
   subject: string = "";
   message: string = "";
+  form: FormGroup = this.formBuilder.group({
+    from_name: "",
+    to_name: "admin",
+    from_email: "",
+    subject: "",
+    message: "",
+  })
   ngOnInit(): void{
 
   }
@@ -33,7 +41,7 @@ export class ContactsComponent {
     }
     return this.contactForm.get('emailValidator')?.hasError('email') ? 'Not a valid email' : '';
   }
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, private sendEmail: EmailService) {
     this.contactForm = this.formBuilder.group({
       firstnameValidator: ['', [Validators.required, Validators.pattern(/^[a-z ,.'-]+$/i)]],
       lastnameValidator: ['', [Validators.required, Validators.pattern(/^[a-z ,.'-]+$/i)]],
@@ -43,7 +51,7 @@ export class ContactsComponent {
     });
   }
   submitForm() {
-    const message = `My name is ${this.firstName}`
-    alert(message)
+    this.sendEmail.send(this.contactForm);
+    // console.log(this.contactForm.controls["firstnameValidator"].value)
   }
 }

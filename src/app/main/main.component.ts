@@ -50,7 +50,5 @@ export class MainComponent {
     { img: ['assets/projects/sample-gdscuec-registration-site-proj-1.png', 'assets/projects/sample-gdscuec-registration-site-proj-2.png', 'assets/projects/sample-gdscuec-registration-site-proj-3.png'], title: 'Google Developer Student Clubs UE Caloocan - Basic Registration System', tech: 'PHP, MySQL, 000WebHost', caption: 'As a project for our web development subject, we developed a basic registration system for GDSC UE Caloocan.', url: 'https://unfashioned-rack.000webhostapp.com/', alt: "Photo of GDSC UEC's Basic Registration Website"},
   ]
   ngOnInit(): void{
-    // console.log(this.projects[0].url)
-    console.log(this.skillsets[0])
   }
 }
