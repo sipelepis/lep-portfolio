@@ -1,14 +1,14 @@
 
-<app-navbar></app-navbar>
-<div class="min-w-full">
 
+<div class="min-w-full">
+    <app-navbar></app-navbar>
     <div class="h-screen w-full md:h-auto md:flex justify-between container mx-auto mt-[0rem] md:mt-20 2xl:w-7/12">
         <div class="absolute md:static md:w-1/2">
             <div class=" grid place-items-center">
                 <img class="h-auto w-11/12 md:w-11/12" src="assets/main-image.png" alt="image description">
             </div>
         </div>
-        <div class="absolute inset-10 justify-center mt-[15rem] z-10 md:z-0  md:inset-0 md:mx-0 text-center md:static md:text-left flex items-center md:w-1/2">
+        <div class="absolute inset-10 justify-center mt-15 md:mt-20 z-10 md:z-0  md:inset-0 md:mx-0 text-center md:static md:text-left flex items-center md:w-1/2">
             <div>
                 <div class="px-2 font-semibold text-2xl md:text-2xl">
                     Hello, it's me
@@ -22,16 +22,18 @@
             </div>
         </div>
     </div>
-    <div class="isolate">
-        <div class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]" aria-hidden="true">
+    <div class="isolate pointer-events-none">
+        <div class="absolute inset-x-0 top-[-0rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]" aria-hidden="true">
             <div class="relative clippath1 left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-tertiary to-[#005B33] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]"></div>
         </div>
     </div>
-    <div class="isolate">
+    <div class="isolate pointer-events-none">
         <div class="blur-3xl absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden sm:top-[-20rem]" aria-hidden="true">
-          <div class="clippath2 to-[#005B33] relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[300deg] scale-x-100 bg-gradient-to-tr from-tertiary opacity-30 sm:top-[0rem] sm:left-[calc(50%+40rem)] sm:w-[72.1875rem]"></div>
+            <div class="clippath2 to-[#005B33] relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[300deg] scale-x-100 bg-gradient-to-tr from-tertiary opacity-30 sm:top-[0rem] sm:left-[calc(50%+40rem)] sm:w-[72.1875rem]"></div>
         </div>
     </div>
+
+   
     <div class="block md:flex justify-between container mx-auto mt-16 sm:mt-20  2xl:w-7/12">
         <div class="flex items-center w-full md:w-1/2 px-4">
             <div>
