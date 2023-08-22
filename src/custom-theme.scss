@@ -133,10 +133,12 @@ $lep-theme: mat.define-light-theme((
     position: absolute;
     bottom: 0;
     opacity: 90%;
+    border-radius: 0.5rem !important;
   }
   .header-bg{
     display:block;
     opacity:100%;
+    
     --tw-translate-x: 0;
     --tw-translate-y: 0;
     --tw-rotate: 0;

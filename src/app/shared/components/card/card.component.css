@@ -7,3 +7,7 @@
     max-width: 700px;
     border-radius: 5rem !important;
 }
+.card-parent{
+    border-radius: 0.5rem !important;
+    /* background-color: #18B980 !important; */
+}

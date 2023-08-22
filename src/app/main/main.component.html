@@ -1,6 +1,27 @@
 
 <app-navbar></app-navbar>
 <div class="min-w-full">
+
+    <div class="h-screen w-full md:h-auto md:flex justify-between container mx-auto mt-[0rem] md:mt-20 2xl:w-7/12">
+        <div class="absolute md:static md:w-1/2">
+            <div class=" grid place-items-center">
+                <img class="h-auto w-11/12 md:w-11/12" src="assets/main-image.png" alt="image description">
+            </div>
+        </div>
+        <div class="absolute inset-10 justify-center mt-[15rem] z-10 md:z-0  md:inset-0 md:mx-0 text-center md:static md:text-left flex items-center md:w-1/2">
+            <div>
+                <div class="px-2 font-semibold text-2xl md:text-2xl">
+                    Hello, it's me
+                </div>
+                <div class="px-2 py-2 md:py-5 font-1 font-bold text-5xl md:text-5xl">
+                    Phillip Moran <span class="text-tertiary">•</span>
+                </div>
+                <div class="px-2 font-regular text-2xl md:text-xl text-justify font-light">
+                   {{bio}}
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="isolate">
         <div class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]" aria-hidden="true">
             <div class="relative clippath1 left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-tertiary to-[#005B33] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]"></div>
@@ -11,47 +32,26 @@
           <div class="clippath2 to-[#005B33] relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[300deg] scale-x-100 bg-gradient-to-tr from-tertiary opacity-30 sm:top-[0rem] sm:left-[calc(50%+40rem)] sm:w-[72.1875rem]"></div>
         </div>
     </div>
-    <div class="flex justify-between container mx-auto mt-16 sm:mt-20 2xl:w-7/12">
-        <div class=" w-1/2">
-            <div class="grid place-items-center">
-                <img class="h-auto w-11/12" src="assets/main-image.png" alt="image description">
-            </div>
-        </div>
-        <div class="flex items-center w-1/2">
-            <div>
-                <div class=" px-2 font-bold text-2xl">
-                    Hello, it's me
-                </div>
-                <div class="px-2 py-5 font-1 font-bold text-5xl">
-                    Phillip Moran <span class="text-tertiary">•</span>
-                </div>
-                <div class="px-2 font-regular text-xl text-justify font-light">
-                   {{bio}}
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="flex justify-between container mx-auto mt-16 sm:mt-20 2xl:w-7/12">
-        
-        <div class="flex items-center w-1/2 px-4">
+    <div class="block md:flex justify-between container mx-auto mt-16 sm:mt-20  2xl:w-7/12">
+        <div class="flex items-center w-full md:w-1/2 px-4">
             <div>
                 <div class="underline underline-offset-1 text-tertiary px-2 font-bold text-2xl">
                     My Skills
                 </div>
-                <div class="px-2 py-5 font-1 font-bold text-4xl text-justify">
+                <div class="px-2 py-5 font-1 font-bold text-5xl md:text-5xl text-justify">
                     Full-stack Web and android App Development, Data Structures and Algorithms, Git & Version 
                 </div>
             </div>
         </div>
-        <div class="flex items-center w-1/2 px-4">
-            <div class="px-2 font-regular text-xl text-justify font-light">
+        <div class="flex items-center w-full md:w-1/2 px-4">
+            <div class="px-2 font-regular text-2xl md:text-xl text-justify font-light">
                {{skills}}
             </div>
         </div>
     </div>
     
-    <div class="flex justify-between container mx-auto pb-5 2xl:w-7/12 mt-16 sm:mt-20">
-        <div class="grid grid-cols-3 px-4">
+    <div class="flex justify-center md:justify-between container mx-auto pb-5 2xl:w-7/12 mt-16 sm:mt-20">
+        <div class="grid grid-cols-2 md:grid-cols-3 px-4 gap-y-5">
             <div *ngFor="let skills of skillsets">
                 <app-list [skillsets]="[skills]"></app-list>
             </div>
