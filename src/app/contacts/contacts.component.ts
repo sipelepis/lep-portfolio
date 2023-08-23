@@ -1,10 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import {Validators, FormBuilder, FormGroup} from '@angular/forms';
 import { EmailService } from '../email.service';
+import { trigger, state, style, animate, transition } from '@angular/animations';
+
 @Component({
   selector: 'app-contacts',
   templateUrl: './contacts.component.html',
   styleUrls: ['./contacts.component.css'],
+  animations: [
+    trigger('slideInFromBottom', [
+      state('void', style({ opacity: 0,transform: 'translateY(100%)' })),
+      state('*', style({opacity: 1, transform: 'translateY(0)' })),
+      transition(':enter', animate('2000ms ease-out')),
+    ]),
+  ]
 })
 export class ContactsComponent {
   contactForm: FormGroup;

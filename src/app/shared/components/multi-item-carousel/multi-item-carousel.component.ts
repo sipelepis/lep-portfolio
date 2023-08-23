@@ -1,10 +1,17 @@
 import { Component } from '@angular/core';
 import { ProjectInterface } from '../../types/project-interface';
-
+import { trigger, state, style, animate, transition } from '@angular/animations';
 @Component({
   selector: 'app-multi-item-carousel',
   templateUrl: './multi-item-carousel.component.html',
-  styleUrls: ['./multi-item-carousel.component.css']
+  styleUrls: ['./multi-item-carousel.component.css'],
+  animations: [
+    trigger('fadeIn', [
+      state('void', style({opacity: 0, transform: 'scale(0.5)' })),
+      state('*', style({opacity: 1, transform: 'scale(1)' })),
+      transition(':enter', animate('2000ms ease-out')),
+    ]),
+  ]
 })
 export class MultiItemCarouselComponent {
   images: { random: string; picture: string; }[] = []; 

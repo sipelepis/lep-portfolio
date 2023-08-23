@@ -1,14 +1,15 @@
 
 
-<div class="min-w-full">
+<div class="min-w-full overflow-hidden ">
     <app-navbar></app-navbar>
-    <div class="h-screen w-full md:h-auto md:flex justify-between container mx-auto mt-[0rem] md:mt-20 2xl:w-7/12">
-        <div class="absolute md:static md:w-1/2">
-            <div class=" grid place-items-center">
-                <img class="h-auto w-11/12 md:w-11/12" src="assets/main-image.png" alt="image description">
+    <!-- <div [@slideInFromLeft]>test</div> -->
+    <div id="home" class="h-screen w-full md:flex justify-between container mx-auto mt-[0rem] md:mt-20 2xl:w-7/12">
+        <div [hidden]="!isImageLoaded" [@slideInFromLeftImage] class="absolute md:static md:w-1/2">
+            <div  class=" grid place-items-center">
+                <img class="h-auto w-11/12 md:w-11/12" (load)="onImageLoad()" src="assets/main-image.png" alt="image description">
             </div>
         </div>
-        <div class="absolute inset-10 justify-center mt-[17rem] md:mt-20 z-10 md:z-0  md:inset-0 md:mx-0 text-center md:static md:text-left flex items-center md:w-1/2">
+        <div *ngIf="isImageLoaded" [@slideInFromRight] class="absolute inset-10 justify-center mt-[17rem] md:mt-20 z-10 md:z-0  md:inset-0 md:mx-0 text-center md:static md:text-left flex items-center md:w-1/2">
             <div>
                 <div class="px-2 font-semibold text-2xl sm:text-3xl lg:text-4xl md:text-2xl">
                     Hello, it's me
@@ -34,37 +35,38 @@
     </div>
 
    
-    <div class="block md:flex justify-between container mx-auto mt-16 sm:mt-20  2xl:w-7/12">
-        <div class="flex items-center w-full md:w-1/2 px-4">
+    <div id="about" class="block h-full md:flex justify-between container mx-auto mt-16 sm:mt-20  2xl:w-7/12">
+        <div  [@slideInFromLeft] class="flex items-center w-full md:w-1/2 px-4">
             <div>
                 <div class="underline underline-offset-1 text-tertiary px-2 font-bold text-2xl sm:text-3xl lg:text-4xl text-center sm:text-left">
-                    My Skills
+                    About me
                 </div>
                 <div class="px-2 py-5 font-1 font-bold text-2xl sm:text-3xl lg:text-4xl text-center  sm:text-left">
-                    Full-stack Web and android App Development, Data Structures and Algorithms, Git & Version 
+                    Full-stack Web and Android App Development, Data Structures and Algorithms, Git & Version Control
                 </div>
             </div>
         </div>
-        <div class="flex items-center w-full md:w-1/2 px-4">
+        <div  [@slideInFromRight] class="flex items-center w-full md:w-1/2 px-4">
             <div class="px-2 font-regular text-lg  text-center sm:text-justify font-light">
                {{skills}}
             </div>
         </div>
     </div>
     
-    <div class="flex justify-center md:justify-between container mx-auto pb-5 2xl:w-7/12 mt-16 sm:mt-20">
+    <div [@fadeIn] class="flex justify-center md:justify-between container mx-auto pb-5 2xl:w-7/12 mt-16 sm:mt-20">
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 px-4 gap-y-5 md:gap-x-20 lg:gap-x-40">
             <div *ngFor="let skills of skillsets">
                 <app-list [skillsets]="[skills]"></app-list>
             </div>
         </div>
     </div>
-    <div class="block container mx-auto py-5 2xl:w-7/12  px-6 mt-16 sm:mt-20 mt-16 sm:mt-20">
+    <div id="projects" [@slideInFromLeft] class="block container mx-auto py-5 2xl:w-7/12  px-6 mt-16 sm:mt-20 mt-16 sm:mt-20">
         <div class="underline underline-offset-1 text-tertiary font-bold text-2xl sm:text-3xl lg:text-4xl text-center sm:text-left">
           My Projects 
         </div> 
     </div>  
-    <app-multi-item-carousel class="mt-16 sm:mt-20"></app-multi-item-carousel>
+    <app-multi-item-carousel  class="mt-16 sm:mt-20"></app-multi-item-carousel>
+    <app-contacts></app-contacts>
 </div>
-<app-contacts></app-contacts>
+
 <app-footer></app-footer>
