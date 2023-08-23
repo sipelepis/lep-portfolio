@@ -3,13 +3,33 @@
 <div class="min-w-full overflow-x-hidden ">
     <app-navbar></app-navbar>
     <!-- <div [@slideInFromLeft]>test</div> -->
-    <div id="home" class="h-screen w-full md:flex justify-between container mx-auto mt-[0rem] md:mt-20 2xl:w-7/12">
+    <div id="home" class="md:hidden min-h-screen w-full md:flex justify-between container mx-auto mt-[0rem] md:mt-20 2xl:w-7/12">
         <div [hidden]="!isImageLoaded" [@slideInFromLeftImage] class="absolute md:static md:w-1/2">
             <div  class=" grid place-items-center">
                 <img class="h-auto w-11/12 md:w-11/12" (load)="onImageLoad()" src="assets/main-image.png" alt="image description">
             </div>
         </div>
-        <div *ngIf="isImageLoaded" [@slideInFromRight] class="absolute inset-10 justify-center mt-[17rem] md:mt-20 z-10 md:z-0  md:inset-0 md:mx-0 text-center md:static md:text-left flex items-center md:w-1/2">
+        <div *ngIf="isImageLoaded" [@slideInFromRight] class="absolute inset-10 justify-center mt-[10rem] md:mt-10 z-10 md:z-0 md:inset-0 md:mx-0 text-center md:static md:text-left flex items-center md:w-1/2">
+            <div>
+                <div class="px-2 font-semibold text-2xl sm:text-3xl lg:text-4xl md:text-2xl">
+                    Hello, it's me
+                </div>
+                <div class="px-2 py-2 md:py-5 font-1 font-bold text-5xl md:text-5xl">
+                    Phillip Moran <span class="text-tertiary">•</span>
+                </div>
+                <div class="px-2 font-regular text-lg text-center sm:text-justify font-light">
+                   {{bio}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="home" class="hidden md:block md:min-h-[60vh] lg:min-h-[100vh] w-full md:flex justify-between container mx-auto mt-[0rem] mt-10 2xl:w-7/12">
+        <div [hidden]="!isImageLoaded" [@slideInFromLeftImage] class="static md:w-1/2  items-center">
+            <div  class=" grid place-items-center">
+                <img class="h-auto w-11/12 md:w-11/12" (load)="onImageLoad()" src="assets/main-image.png" alt="image description">
+            </div>
+        </div>
+        <div *ngIf="isImageLoaded" [@slideInFromRight] class="justify-center z-0 md:inset-0 md:mx-0 text-center md:static md:text-left flex items-center w-1/2">
             <div>
                 <div class="px-2 font-semibold text-2xl sm:text-3xl lg:text-4xl md:text-2xl">
                     Hello, it's me
@@ -35,7 +55,7 @@
     </div>
 
    
-    <div id="about" class="block h-full md:flex justify-between container mx-auto mt-16 sm:mt-20  2xl:w-7/12">
+    <div id="about" class="block h-full md:flex justify-between container mx-auto mt-5 sm:mt-10 lg:mt-0 2xl:w-7/12">
         <div  [@slideInFromLeft] class="flex items-center w-full md:w-1/2 px-4">
             <div>
                 <div class="underline underline-offset-1 text-tertiary px-2 font-bold text-2xl sm:text-3xl lg:text-4xl text-center sm:text-left">

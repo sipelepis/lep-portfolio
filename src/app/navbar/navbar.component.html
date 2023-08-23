@@ -12,16 +12,16 @@
           </svg>
         </button>
         <mat-menu #menu="matMenu">
-          <button (click)="scrollToElement('home')" mat-menu-item>About</button>
-          <button (click)="scrollToElement('about')" mat-menu-item>Projects</button> 
+          <button (click)="scrollToElement('home')" mat-menu-item>Home</button>
+          <button (click)="scrollToElement('about')" mat-menu-item>About</button> 
           <button (click)="scrollToElement('projects')" mat-menu-item>Projects</button> 
           <button (click)="scrollToElement('contacts')" mat-menu-item>Contact</button> 
         </mat-menu>
       </div>
       <div class="md:flex hidden">
         <ul id="nav-mobile" class="p-4 right hide-on-med-and-down flex space-x-4">
-          <li><button (click)="scrollToElement('home')">About</button></li>
-          <li><button (click)="scrollToElement('about')">Projects</button></li>
+          <li><button (click)="scrollToElement('home')">Home</button></li>
+          <li><button (click)="scrollToElement('about')">About</button></li>
           <li><button (click)="scrollToElement('projects')">Projects</button></li>
           <li><button (click)="scrollToElement('contacts')">Contact</button></li>
         </ul>
