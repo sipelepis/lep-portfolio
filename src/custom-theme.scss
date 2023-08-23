@@ -168,6 +168,19 @@ $lep-theme: mat.define-light-theme((
     background-color: #18B980 !important;
   }
 }
+// @media (max-width: 640px) {
+//   .mct{
+//       font-size: .1rem !important;
+//   }
+//   .mcs{
+//     font-size: .1rem !important;
+// }
+// }
+@media screen and (max-width: 640px){
+  .mct, .mcs, .mpc{
+      font-size: 0.6rem !important;
+  }
+}
 @include mat.all-component-themes($lep-theme);
 .mat-mdc-tab-group, .mat-mdc-tab-nav-bar{
   --mat-tab-header-active-focus-label-text-color: #18B980;
