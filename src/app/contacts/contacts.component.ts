@@ -17,18 +17,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 })
 export class ContactsComponent {
   contactForm: FormGroup;
-  firstName: string = "";
-  lastName: string = "";
-  email: string = "";
-  subject: string = "";
-  message: string = "";
-  form: FormGroup = this.formBuilder.group({
-    from_name: "",
-    to_name: "admin",
-    from_email: "",
-    subject: "",
-    message: "",
-  })
+
   ngOnInit(): void{
 
   }
@@ -61,6 +50,5 @@ export class ContactsComponent {
   }
   submitForm() {
     this.sendEmail.send(this.contactForm);
-    // console.log(this.contactForm.controls["firstnameValidator"].value)
   }
 }

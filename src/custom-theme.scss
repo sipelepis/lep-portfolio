@@ -168,14 +168,7 @@ $lep-theme: mat.define-light-theme((
     background-color: #18B980 !important;
   }
 }
-// @media (max-width: 640px) {
-//   .mct{
-//       font-size: .1rem !important;
-//   }
-//   .mcs{
-//     font-size: .1rem !important;
-// }
-// }
+
 @media screen and (max-width: 640px){
   .mct, .mcs, .mpc{
       font-size: 0.6rem !important;

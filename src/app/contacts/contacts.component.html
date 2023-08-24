@@ -1,4 +1,4 @@
-<div id="contacts" [@slideInFromBottom] class="isolate py-12 sm:py-32 ">
+<div id="contacts" [@slideInFromBottom] class="isolate mt-10">
     <div class="mx-auto max-w-2xl text-center">
       <h2 class="text-3xl font-bold tracking-tight text-tertiary sm:text-4xl">Let's work together.</h2>
       <p class="mt-2 text-lg leading-8 text-primary">If you'd like to talk about a project you want help with, just drop me a message.</p>
@@ -8,7 +8,7 @@
         <div>
           <mat-form-field class="example-full-width">
             <mat-label for="first-name" class="text-sm font-semibold leading-6 ">First name</mat-label>
-            <input matInput [(ngModel)]="firstName" placeholder="Steve" type="text" name="first-name" id="first-name" class="input-ringless text-secondary block w-full rounded-md" formControlName="firstnameValidator" required>
+            <input matInput  placeholder="Steve" type="text" name="first-name" id="first-name" class="input-ringless text-secondary block w-full rounded-md" formControlName="firstnameValidator" required>
             <mat-error *ngIf="contactForm.get('firstnameValidator')?.invalid">
               {{checkName("firstnameValidator")}}
             </mat-error>
@@ -17,7 +17,7 @@
         <div>
           <mat-form-field class="example-full-width">
             <mat-label for="last-name" class="text-sm font-semibold leading-6 ">Last name</mat-label>
-            <input matInput [(ngModel)]="lastName" placeholder="Dela Cruz" type="text" name="last-name" id="last-name" class="input-ringless text-secondary block w-full rounded-md" formControlName="lastnameValidator" required>
+            <input matInput  placeholder="Dela Cruz" type="text" name="last-name" id="last-name" class="input-ringless text-secondary block w-full rounded-md" formControlName="lastnameValidator" required>
             <mat-error *ngIf="contactForm.get('lastnameValidator')?.invalid">
               {{checkName("lastnameValidator")}}
             </mat-error>
@@ -26,7 +26,7 @@
         <div class="sm:col-span-2">
           <mat-form-field class="example-full-width">
             <mat-label for="email" class="text-sm font-semibold leading-6">Email</mat-label>
-            <input matInput [(ngModel)]="email" placeholder="stevegamerz@gmail.com" type="email" name="email" id="email" class="input-ringless text-secondary block w-full rounded-md" formControlName="emailValidator" required>
+            <input matInput  placeholder="stevegamerz@gmail.com" type="email" name="email" id="email" class="input-ringless text-secondary block w-full rounded-md" formControlName="emailValidator" required>
             <mat-error *ngIf="contactForm.get('emailValidator')?.invalid">
               {{checkEmail()}}
             </mat-error>
@@ -35,7 +35,7 @@
         <div class="sm:col-span-2">
           <mat-form-field class="example-full-width">
             <mat-label for="subject" class="text-sm font-semibold leading-6">Subject</mat-label>
-            <input matInput [(ngModel)]="subject" placeholder="Join Our Team as [Position Title]" type="text" name="subject" id="subject" maxlength="70" class="input-ringless text-secondary block w-full rounded-md" formControlName="subjectValidator" required>
+            <input matInput  placeholder="Join Our Team as [Position Title]" type="text" name="subject" id="subject" maxlength="70" class="input-ringless text-secondary block w-full rounded-md" formControlName="subjectValidator" required>
             <mat-error *ngIf="contactForm.get('subjectValidator')?.invalid">
               {{checkSubject()}}
             </mat-error>
@@ -44,7 +44,7 @@
         <div class="sm:col-span-2">
           <mat-form-field class="example-full-width">
             <mat-label for="message" class="text-sm font-semibold leading-6">Message</mat-label>
-            <textarea  matInput [(ngModel)]="message" placeholder="We invite to you be a part of our team for the position [Position Title]" type="text" rows="4" name="message" id="message" class="input-ringless text-secondary block w-full rounded-md" formControlName="messageValidator" required></textarea>
+            <textarea  matInput  placeholder="We invite to you be a part of our team for the position [Position Title]" type="text" rows="4" name="message" id="message" class="input-ringless text-secondary block w-full rounded-md" formControlName="messageValidator" required></textarea>
             <mat-error *ngIf="contactForm.get('messageValidator')?.invalid">
               {{checkMessage()}}
             </mat-error>
