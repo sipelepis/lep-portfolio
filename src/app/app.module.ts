@@ -20,6 +20,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { EmailService } from './email.service';
 import { MatSnackBarModule} from '@angular/material/snack-bar';
+import { CarouselModule } from 'primeng/carousel';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,8 +33,8 @@ import { MatSnackBarModule} from '@angular/material/snack-bar';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatMenuModule,
     SharedModule,
+    MatMenuModule,
     MatTabsModule,
     MatIconModule,
     MatCardModule,
@@ -41,6 +42,7 @@ import { MatSnackBarModule} from '@angular/material/snack-bar';
     MatDividerModule,
     MatInputModule,
     MatFormFieldModule,
+    CarouselModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
@@ -49,7 +51,11 @@ import { MatSnackBarModule} from '@angular/material/snack-bar';
   providers: [EmailService],
   bootstrap: [AppComponent],
   exports: [
-    ContactsComponent
+    ContactsComponent,
+    AppComponent,
+    NavbarComponent,
+    FooterComponent,
+    MainComponent,
   ]
 })
 export class AppModule { }

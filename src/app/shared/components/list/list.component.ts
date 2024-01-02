@@ -8,5 +8,4 @@ import { SkillsInterface } from '../../types/skills-interface';
 })
 export class ListComponent {
   @Input() skillsets: SkillsInterface[] = [];
-
 }

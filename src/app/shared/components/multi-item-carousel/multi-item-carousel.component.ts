@@ -14,7 +14,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   ]
 })
 export class MultiItemCarouselComponent {
-  images: { random: string; picture: string; }[] = []; 
+  images: { random: string; picture: string; }[] = [];
   projects: ProjectInterface[] =[];
   responsiveOptions;
 
@@ -31,8 +31,6 @@ export class MultiItemCarouselComponent {
     }];
   }
 
-  
-  
   ngOnInit(): void {
     this.projects=[
       { img: ['assets/projects/lepmoran-proj-1.png', 'assets/projects/lepmoran-proj-2.png', 'assets/projects/lepmoran-proj-1.png'], title: 'Portfolio Website of Phillip Jan M. Moran', tech: 'Angular, Angular Material, EmailJS, Mailgun, Vercel', caption: 'As a project for our web development subject, we developed a basic registration system for GDSC UE Caloocan.', url: 'https://lepmoran.me', alt: "Photo of Philllip Moran's Website Portfolio"},

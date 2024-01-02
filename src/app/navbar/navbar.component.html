@@ -2,7 +2,6 @@
     <div class="nav-wrapper flex justify-between container mx-auto 2xl:w-7/12">
       <a href="#" class="flex brand-logo p-4">
         <img src="assets/logo/PM.png" class="h-8 mr-3" alt="Flowbite Logo" />
-        
       </a>
       <div class="p-2">
         <button mat-button [matMenuTriggerFor]="menu" class="inline-flex items-center w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
@@ -13,9 +12,9 @@
         </button>
         <mat-menu #menu="matMenu">
           <button (click)="scrollToElement('home')" mat-menu-item>Home</button>
-          <button (click)="scrollToElement('about')" mat-menu-item>About</button> 
-          <button (click)="scrollToElement('projects')" mat-menu-item>Projects</button> 
-          <button (click)="scrollToElement('contacts')" mat-menu-item>Contact</button> 
+          <button (click)="scrollToElement('about')" mat-menu-item>About</button>
+          <button (click)="scrollToElement('projects')" mat-menu-item>Projects</button>
+          <button (click)="scrollToElement('contacts')" mat-menu-item>Contact</button>
         </mat-menu>
       </div>
       <div class="md:flex hidden">

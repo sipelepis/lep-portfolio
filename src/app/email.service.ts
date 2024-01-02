@@ -16,7 +16,6 @@ export class EmailService {
     message: "",
   })
   constructor(private http: HttpClient, private fb: FormBuilder, private _snackBar: MatSnackBar) {}
-  
   async send(contactForm: FormGroup){
     emailjs.init('nXnP-BsB-OLcNNRET');
     let response = await emailjs.send("service_esjdngk","template_98r5llz",{
@@ -26,7 +25,6 @@ export class EmailService {
       subject: contactForm.controls["subjectValidator"].value,
       message: contactForm.controls["messageValidator"].value,
     });
-    // console.log('Message has been sent!');
     this._snackBar.open("Message Successfully Sent!", "", {duration: 3000})
   }
 }

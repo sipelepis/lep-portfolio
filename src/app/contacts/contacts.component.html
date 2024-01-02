@@ -9,9 +9,6 @@
           <mat-form-field class="example-full-width">
             <mat-label for="first-name" class="text-sm font-semibold leading-6 ">First name</mat-label>
             <input matInput  placeholder="Steve" type="text" name="first-name" id="first-name" class="input-ringless text-secondary block w-full rounded-md" formControlName="firstnameValidator" required>
-            <mat-error *ngIf="contactForm.get('firstnameValidator')?.invalid">
-              {{checkName("firstnameValidator")}}
-            </mat-error>
           </mat-form-field>
         </div>
         <div>

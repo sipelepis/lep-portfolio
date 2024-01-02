@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import {Validators, FormBuilder, FormGroup} from '@angular/forms';
 import { EmailService } from '../email.service';
 import { trigger, state, style, animate, transition } from '@angular/animations';
@@ -17,28 +17,6 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 })
 export class ContactsComponent {
   contactForm: FormGroup;
-
-  ngOnInit(): void{
-
-  }
-  checkSubject(){
-    return (this.contactForm.get('subjectValidator')?.hasError('required')) ? "Subject must have a value" :"";
-  }
-  checkMessage(){
-    return (this.contactForm.get('messageValidator')?.hasError('required')) ? "Message must have a value" :"";
-  }
-  checkName(inputName: string){
-    if(this.contactForm.get(inputName)?.hasError('required')){
-      return (inputName === "firstnameValidator" ? "First name must have a value" : "Last name must have a value");
-    }
-    return this.contactForm.get(inputName)?.hasError('pattern') ? (inputName === "firstnameValidator" ? `Not a valid First Name` : `Not a valid Last Name`) : '';
-  }
-  checkEmail(){
-    if (this.contactForm.get('emailValidator')?.hasError('required')){
-      return 'You must enter a value';
-    }
-    return this.contactForm.get('emailValidator')?.hasError('email') ? 'Not a valid email' : '';
-  }
   constructor(private formBuilder: FormBuilder, private sendEmail: EmailService) {
     this.contactForm = this.formBuilder.group({
       firstnameValidator: ['', [Validators.required, Validators.pattern(/^[a-z ,.'-]+$/i)]],
@@ -47,6 +25,27 @@ export class ContactsComponent {
       subjectValidator: ['', [Validators.required]],
       messageValidator: ['', [Validators.required]]
     });
+  }
+  ngOnInit(): void{
+
+  }
+  checkFormControl(controlName: string, errorType: string, errorMessage: string) {
+    return this.contactForm.get(controlName)?.hasError(errorType) ? errorMessage : "";
+  }
+  checkSubject() {
+    return this.checkFormControl('subjectValidator', 'required', 'Subject must have a value');
+  }
+  checkMessage() {
+    return this.checkFormControl('messageValidator', 'required', 'Message must have a value');
+  }
+  checkName(inputName: string) {
+    return this.checkFormControl(inputName, 'required', 'Name must have a value');
+  }
+  checkEmail(){
+    if (this.contactForm.get('emailValidator')?.hasError('required')){
+      return 'You must enter a value';
+    }
+    return this.contactForm.get('emailValidator')?.hasError('email') ? 'Not a valid email' : '';
   }
   submitForm() {
     this.sendEmail.send(this.contactForm);

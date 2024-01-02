@@ -11,13 +11,14 @@ import { CardComponent } from './components/card/card.component';
 import { CarouselModule } from 'primeng/carousel';
 import { MultiItemCarouselComponent } from './components/multi-item-carousel/multi-item-carousel.component';
 import { ListComponent } from './components/list/list.component';
+
 @NgModule({
   declarations: [
     CarouselComponent,
     ButtonComponent,
     CardComponent,
     MultiItemCarouselComponent,
-    ListComponent
+    ListComponent,
   ],
   imports: [
     CommonModule,
